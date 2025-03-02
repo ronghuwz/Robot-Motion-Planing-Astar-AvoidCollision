@@ -1,4 +1,24 @@
 # Robot-Motion-Planing-Astar-AvoidCollision
+
+### Both matlab & C++ code available.
+
+For the C++ program, you'll need OpenCV for visualization. For macOS, install it using:
+```sh
+brew install opencv
+```
+
+
+C++ compilation and linking using g++ with OpenCV support: 
+```sh
+g++ -std=c++17 -o astar_robot main.cpp `pkg-config --cflags --libs opencv4`
+```
+Run the program with:
+```sh
+./astar_robot
+```
+
+
+### How it works:
 Two robot working on the same work space, from starting point to goal and return to the starting point. Avoid collision while moving.
 
 First,  a grid map was defined where 0 represents free path (black blocks), 1 represents obstacles (grey blocks), and 2 represents a collision region (green blocks).
